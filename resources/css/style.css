@@ -1,0 +1,260 @@
+/* universal styles */
+
+html {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.125rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1rem;
+    text-transform: all-uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+p {
+    font-weight: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* navigation bar */
+
+nav {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding-left: 24px;
+}
+
+nav ul {
+    padding-right: 24px;
+}
+
+li {
+    display: inline;
+    padding-left: 16px;
+}
+
+main, footer {
+    position: relative;
+    top: 64px;
+}
+/* headline section */
+#start-here {
+    display: flex;
+    width: 100%;
+    background-color: gray;
+    align-items: center;
+}
+
+#start-here img {
+    width: 60%;
+    padding: 32px 24px;
+}
+
+#start-here-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    width: 30%;
+}
+
+#start-here-text h1,h3,button {
+    padding-bottom: 24px;
+}
+
+button {
+    height: 32px;
+    border: none;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Information section */
+#info {
+    display: flex;
+    width: 100%;
+}
+
+.col60 {
+    width: 60%;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#motivation h2 {
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+.attrib {
+    padding-top: 24px;
+}
+
+#info-links {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 32px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+}
+
+#info-links img {
+    width: 35%;
+    height: auto;
+    padding: 16px;
+}
+.info-button {
+    display: flex;
+    padding-left: 16px;
+    margin-bottom: 16px;
+}
+
+.info-button h3 {
+    padding-bottom: 0px;
+}
+
+.info-button p {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    line-height: 1.1;
+}
+.info-button-text {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    justify-content: center;
+}
+
+/* Courses section */
+
+#start-learning {
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+}
+
+#start-learning h2 {
+    padding-top: 32px;
+}
+#course-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 32px 72px;
+    gap: 32px;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.course img {
+    height: auto;
+}
+
+.course-text {
+    padding: 16px 16px 24px 16px;
+    line-height: 1.25;
+    text-align: left;
+}
+
+#orientation, #guest-lecture, #fisma {
+    background-color: gray;
+}
+/* Thesis article */
+
+#thesis {
+    width: 100%;
+    text-align: center;
+}
+
+#thesis h2 {
+    padding: 32px;
+}
+
+#thesis-modules {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: left;
+}
+
+#thesis-col1 {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+#thesis-col1 h3 {
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+video {
+    width: 100%;
+}
+
+#thesis-col2 {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+.info-button img {
+    width: 35%;
+    height: auto;
+    padding: 16px;
+}
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 48px 24px;
+    border-top: 1px solid gray;
+}
