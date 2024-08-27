@@ -4,6 +4,8 @@ html {
     font-size: 16px;
     font-weight: bold;
     width: 100%;
+    font-family: Roboto, sans-serif;
+    color: #2e2e33;
 }
 
 h1 {
@@ -18,7 +20,7 @@ h2 {
 
 h3 {
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: medium;
 }
 
 h6 {
@@ -110,7 +112,7 @@ main, footer {
 #start-here {
     display: flex;
     width: 100%;
-    background-color: gray;
+    background-color: #b5b5c4;
     align-items: center;
 }
 
@@ -136,6 +138,8 @@ button {
     border: none;
     text-align: center;
     padding: 8px;
+    background-color: #46464d;
+    color: #d1d1e6;
 }
 
 @media only screen and (max-width: 625px){
@@ -296,7 +300,7 @@ button {
 /* Courses section */
 
 #start-learning {
-    background-color: gray;
+    background-color: #b5b5c4;
     width: 100%;
     text-align: center;
 }
@@ -341,6 +345,12 @@ button {
     flex-grow: 2;
 }
 
+@media only screen and (min-width: 455px) and (max-width: 625px) {
+    .course-text h3 {
+        padding-left: 0px;
+    }
+}
+
 @media only screen and (max-width: 455px) {
     .course img, h6, p {
         display: none;
@@ -366,14 +376,18 @@ button {
     #course-gallery h3 {
         padding: 0px;
     }
+
 }
 
 /* Thesis article */
 
 #orientation, #guest-lecture, #fisma {
-    background-color: gray;
+    background-color: #b5b5c4;
 }
 
+#now-and-then, #campus {
+    background-color: #dadaf2;
+}
 #thesis {
     width: 100%;
     text-align: center;
@@ -395,6 +409,7 @@ button {
     width: 60%;
     flex-direction: column;
     line-height: 1.2;
+    padding-top: 0px;
 }
 
 #thesis-col1 h3 {
