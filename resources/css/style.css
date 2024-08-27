@@ -78,15 +78,17 @@ main, footer {
 }
 
 @media only screen and (max-width: 585px) {
-    .desktop {
-      display: none;
+    #desktop-nav {
+        display: none;
     }
 
-    nav {
-        display:flex;
+    #mobile-nav {
+        display: flex;
+        width: 100%;
         justify-content: center;
     }
-    nav ul {
+
+    #mobile-nav ul {
         display: flex;
         width: 100%;
         justify-content: space-around;
@@ -94,8 +96,13 @@ main, footer {
 }
 
 @media only screen and (min-width: 585px) {
-    .mobile {
+    #mobile-nav {
         display: none;
+    }
+
+    #desktop-nav {
+        display: flex;
+        z-index: 100;
     }
 }
 
@@ -134,21 +141,27 @@ button {
 @media only screen and (max-width: 625px){
     #start-here {
         flex-direction: column;
+        width: 100%;
     }
     #start-here img {
         width: 100%;
         padding: 0px 0px 32px 0px
     }
     #start-here-text {
+        align-items: stretch;
         width: 100%;
+        text-align: center;
+    }
+
+    #start-here-text h1, h3 {
         padding-left: 16px;
         padding-right: 16px;
-        text-align: center;
     }
     button {
         margin: 24px 16px 32px 16px;
     }
 }
+
 /* Information section */
 #info {
     display: flex;
@@ -161,6 +174,10 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#motivation img {
+    width: auto;
 }
 
 #motivation h2 {
@@ -182,14 +199,13 @@ button {
 }
 
 #info-links img {
-    width: 35%;
     height: auto;
     padding: 16px;
 }
+
 .info-button {
     display: flex;
-    padding-left: 16px;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 
 .info-button h3 {
@@ -209,6 +225,74 @@ button {
     justify-content: center;
 }
 
+@media only screen and (min-width: 930px) {
+    .info-button .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    #motivation {
+        display: none;
+        width: 0%;
+    }
+
+    #info-links {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .info-button {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .info-button:first-child {
+        padding-top: 0px;
+    }
+
+    .info-button:last-child {
+        padding-bottom: 16px;
+    }
+
+    #info-links img {
+        flex-grow: 1;
+        padding: 0px;
+    }
+    .info-button .desktop {
+        display: none;
+    }
+
+    #info-links img {
+        width: 100%;
+    }
+
+    .info-button-text {
+        width: 100%;
+        align-items: stretch;
+        padding-top: 32px;
+    }
+
+    .info-button-text h3 {
+        padding-left: 16px;
+    }
+
+    .info-button-text p {
+        padding-left: 16px;
+    }
+
+    .info-button-text a {
+        padding-left: 16px;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .info-button-text p {
+        display: block;
+    }
+}
 /* Courses section */
 
 #start-learning {
@@ -220,18 +304,29 @@ button {
 #start-learning h2 {
     padding-top: 32px;
 }
+
+#course-gallery-container {
+    max-width: 100%;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-bottom: 32px;
+}
+
 #course-gallery {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    padding: 32px 72px;
+    width: 100%;
     gap: 32px;
+    padding-top: 32px;
+    justify-content: center;
 }
 
 .course {
     display: flex;
     flex-direction: column;
     width: 30%;
+    justify-content: space-between;
+    flex-grow: 2;
 }
 
 .course img {
@@ -242,12 +337,42 @@ button {
     padding: 16px 16px 24px 16px;
     line-height: 1.25;
     text-align: left;
+    background-color: white;
+    flex-grow: 2;
 }
+
+@media only screen and (max-width: 455px) {
+    .course img, h6, p {
+        display: none;
+    }
+
+    #course-gallery {
+        flex-direction: column;
+        padding-top: 16px;
+        gap: 8px;
+    }
+
+    .course {
+        width: 100%;
+    }
+
+    #course-gallery-container {
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 32px;
+    }
+
+    #course-gallery h3 {
+        padding: 0px;
+    }
+}
+
+/* Thesis article */
 
 #orientation, #guest-lecture, #fisma {
     background-color: gray;
 }
-/* Thesis article */
 
 #thesis {
     width: 100%;
@@ -291,11 +416,47 @@ video {
     height: auto;
     padding: 16px;
 }
+
+@media only screen and (max-width: 930px) {
+    #thesis h2 {
+        padding-top: 32px;
+        padding-bottom: 16px;
+    }
+    
+    #thesis-col2 {
+        display: none;
+    }
+
+    #thesis-col1 {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #thesis-modules {
+        padding: 0px 0px 24px 0px;
+    }
+
+    #thesis-detail {
+        display: none;
+    }
+}
+
 /* Footer */
 
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 16px 24px 48px 24px;
+    padding: 16px;
     border-top: 1px solid gray;
+}
+
+@media only screen and (max-width: 455px) {
+    
+    footer p {
+        display: block;
+    }
+    
+    footer ul {
+        display: none;
+    }
 }

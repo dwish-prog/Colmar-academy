@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Colmar Academy</title>
         <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     </head>
     <body>
-        <nav class="desktop">
+        <nav id="desktop-nav">
             <div id="logo">
                 <img src="resources/media/ic-logo.svg">
                 <p id="logo-text"><strong>COLMAR</strong> ACADEMY</p>
@@ -19,7 +20,7 @@
                 <li><a href="#">Sign in</a></li>
             </ul>
         </nav>
-        <nav class="mobile">
+        <nav id="mobile-nav">
             <ul>
                 <li><a href="#"><img src="resources/media/ic-logo.svg"></a></li>
                 <li><a href="#"><img src="resources/media/ic-on-campus.svg"></a></li>
@@ -45,7 +46,8 @@
                 </div>
                 <div id="info-links" class="col40">
                     <div id="orientation" class="info-button">
-                        <img src="resources/media/information-orientation.jpg">
+                        <img class="desktop" src="resources/media/information-orientation.jpg">
+                        <img class="mobile" src="resources/media/information-orientation-mobile.jpg">
                         <div class="info-button-text">
                             <h3>Orientation date</h3>
                             <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
@@ -53,7 +55,8 @@
                         </div>
                     </div>
                     <div id="campus" class="info-button">
-                        <img src="resources/media/information-campus.jpg">
+                        <img class="desktop" src="resources/media/information-campus.jpg">
+                        <img class="mobile" src="resources/media/information-campus-mobile.jpg">
                         <div class="info-button-text">
                             <h3>Our campus</h3>
                             <p>Find which campus is close by you</p>
@@ -61,7 +64,8 @@
                         </div>
                     </div>
                     <div id="guest-lecture" class="info-button">
-                        <img src="resources/media/information-guest-lecture.jpg">
+                        <img class="desktop" src="resources/media/information-guest-lecture.jpg">
+                        <img class="mobile" src="resources/media/information-guest-lecture-mobile.jpg">
                         <div class="info-button-text">
                             <h3>Our guest lecture</h3>
                             <p>Join a keynote with Oliver Sack about music in medical treatment</p>
@@ -72,53 +76,55 @@
             </div>
             <div id="start-learning">
                 <h2>Start learning</h2>
-                <div id="course-gallery">
-                    <div id="software" class="course">
-                        <img src="resources/media/course-software.jpg">
-                        <div class="course-text">
-                            <h3>Software engineering</h3>
-                            <h6>COURSES</h6>
-                            <p>Web Development, Mobile Development, iOT, APIs</p>
+                <div id="course-gallery-container">
+                    <div id="course-gallery">
+                        <div id="software" class="course">
+                            <img src="resources/media/course-software.jpg">
+                            <div class="course-text">
+                                <h3>Software engineering</h3>
+                                <h6>COURSES</h6>
+                                <p>Web Development, Mobile Development, iOT, APIs</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="Art" class="course">
-                        <img src="resources/media/course-computer-art.jpg">
-                        <div class="course-text">
-                            <h3>Computer art</h3>
-                            <h6>COURSES</h6>
-                            <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                        <div id="Art" class="course">
+                            <img src="resources/media/course-computer-art.jpg">
+                            <div class="course-text">
+                                <h3>Computer art</h3>
+                                <h6>COURSES</h6>
+                                <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="Design" class="course">
-                        <img src="resources/media/course-design.jpg">
-                        <div class="course-text">
-                            <h3>Design</h3>
-                            <h6>COURSES</h6>
-                            <p>User Experience Design, User Research, Visual Design</p>
+                        <div id="Design" class="course">
+                            <img src="resources/media/course-design.jpg">
+                            <div class="course-text">
+                                <h3>Design</h3>
+                                <h6>COURSES</h6>
+                                <p>User Experience Design, User Research, Visual Design</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="Data" class="course">
-                        <img src="resources/media/course-data.jpg">
-                        <div class="course-text">
-                            <h3>Data</h3>
-                            <h6>COURSES</h6>
-                            <p>Data Science, Big Data, SQL, Data Visualization</p>
+                        <div id="Data" class="course">
+                            <img src="resources/media/course-data.jpg">
+                            <div class="course-text">
+                                <h3>Data</h3>
+                                <h6>COURSES</h6>
+                                <p>Data Science, Big Data, SQL, Data Visualization</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="Business" class="course">
-                        <img src="resources/media/course-business.jpg">
-                        <div class="course-text">
-                            <h3>Business</h3>
-                            <h6>COURSES</h6>
-                            <p>Product Development, Business Development, Startup</p>
+                        <div id="Business" class="course">
+                            <img src="resources/media/course-business.jpg">
+                            <div class="course-text">
+                                <h3>Business</h3>
+                                <h6>COURSES</h6>
+                                <p>Product Development, Business Development, Startup</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="Marketing" class="course">
-                        <img src="resources/media/course-marketing.jpg">
-                        <div class="course-text">
-                            <h3>Marketing</h3>
-                            <h6>COURSES</h6>
-                            <p>Analytics, Content Marketing, Mobile Marketing</p>
+                        <div id="Marketing" class="course">
+                            <img src="resources/media/course-marketing.jpg">
+                            <div class="course-text">
+                                <h3>Marketing</h3>
+                                <h6>COURSES</h6>
+                                <p>Analytics, Content Marketing, Mobile Marketing</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,7 +136,7 @@
                 <div id="thesis-modules">
                     <div id="thesis-col1" class="col60">
                         <div id="thesis-video">
-                            <video controls="controls">
+                            <video controls autoplay muted loop>
                                 <source type="video/mp4" src="resources/media/thesis.mp4"/>Your browser doesn't support this video
                             </video>
                         </div>
